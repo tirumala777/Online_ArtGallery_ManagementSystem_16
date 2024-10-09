@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Gallery - Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="home-background-container">
+        <img src="image1.jpeg" alt="Art Gallery" class="background-image">
+        <div class="overlay"></div>
+        <div class="container home-container">
+            <h1>Welcome to the Art Gallery</h1>
+            <p>Discover, manage, and curate your art collection with our Art Gallery Management System. Explore stunning artworks, stay connected with renowned artists, and keep track of your personal collection—all in one place!</p>
+            
+            <div class="dashboard">
+                <h2>Dashboard</h2>
+                <div class="dashboard-modules">
+
+                    <!-- View Gallery Module -->
+                    <div class="module" onclick="redirectToGallery()">
+                        <img src="image3.jpg" alt="Gallery">
+                        <h3>View Gallery</h3>
+                        <p>Explore a vast collection of artwork from classical to contemporary. Our gallery offers a wide range of visual experiences for art enthusiasts.</p>
+                    </div>
+
+                    <!-- Featured Artists Module -->
+                    <div class="module" onclick="redirectToFeaturedArtists()">
+                        <img src="image2.jpg" alt="Artists">
+                        <h3>Featured Artists</h3>
+                        <p>Discover the incredible talents behind the art. Learn about the artists' stories, techniques, and contributions to the world of art.</p>
+                    </div>
+
+                    <!-- Manage Your Collection Module -->
+                    <div class="module" onclick="redirectToUserCollection()">
+                        <img src="image4.jpeg" alt="User">
+                        <h3>Manage Your Collection</h3>
+                        <p>Organize and manage your personal art collection. Keep track of your purchases, favorite pieces, and more with our intuitive management tools.</p>
+                    </div>
+
+                    <!-- Payment Module -->
+                    <div class="module" onclick="redirectToPayment()">
+                        <img src="pay.avif" alt="Payment">
+                        <h3>Payment</h3>
+                        <p>Pay for your selected artwork, gallery tickets, or artist support directly through our secure payment system.</p>
+                    </div>
+
+                </div>
+            </div>
+            <button onclick="logout()">Logout</button>
+        </div>
+    </div>
+
+    <script>
+        // Redirect to Gallery page
+        function redirectToGallery() {
+            window.location.href = 'gallery.html';
+        }
+
+        // Redirect to Featured Artists page
+        function redirectToFeaturedArtists() {
+            window.location.href = 'artists.html';
+        }
+
+        // Redirect to User Collection page
+        function redirectToUserCollection() {
+            window.location.href = 'collection.html';
+        }
+
+        // Redirect to Payment page
+        function redirectToPayment() {
+            window.location.href = 'payment.html';
+        }
+
+        // Function to handle logout
+        function logout() {
+            alert("You have been logged out.");
+            window.location.href = 'login.html'; // Redirect to login
+        }
+    </script>
+</body>
+</html>
